@@ -33,8 +33,8 @@ while True :
 	Switch = GPIO.input(24)
 	if (Switch==0):
 		print('Button pressed!')
-		payload = {"datapoints":[{"dataChnId":"Switch","values":{"value":Switch}}]}
-		post_to_mcs(payload)
 	else:
 		print('Button released!')
+	payload = {"datapoints":[{"dataChnId":"Switch","values":{"value":Switch}}]}
+	post_to_mcs(payload)
 sys.exit(1)
